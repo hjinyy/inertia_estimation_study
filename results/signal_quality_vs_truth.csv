@@ -1,3 +1,0 @@
-method,frequency_RMSE_mHz,ESS_power_RMSE_MW
-WMU (one-cycle feature),0.255025,0.024670
-PMU-like (six-cycle feature),1.703002,0.225520
