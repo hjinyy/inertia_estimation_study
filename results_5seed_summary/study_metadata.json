@@ -1,0 +1,16 @@
+{
+  "seeds": [
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024
+  ],
+  "n_stages_each_seed": 4,
+  "n_total": 20,
+  "RMSE_reduction_pct": 87.07192846565876,
+  "baseline": "Conventional ARX estimator from same WMU 1-cycle 240 Hz feature representation",
+  "proposed": "WMU-derived 1-cycle features and DPSS multitaper, physics-guided nonnegative multi-time-scale dictionary with CV and model mismatch uncertainty",
+  "caveat": "Both ARX and proposed use same WMU 240Hz data; isolates algorithm comparison but does NOT prove WMU superiority over compliant PMU.",
+  "CI": "Heuristic model discrepancy envelope is NOT a calibrated confidence interval; bootstrap-only intervals were overconfident and omitted from main plots."
+}

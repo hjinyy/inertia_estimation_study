@@ -1,0 +1,35 @@
+{
+  "experiment": "Closed-loop SG+ESS/PV black-box ambient synthetic waveform, 4 x 120-s stages",
+  "sampling": {
+    "raw_abc_Hz": 15360,
+    "WMU_features_Hz": 240,
+    "PMU_like_fps": 60
+  },
+  "estimators": {
+    "baseline": "SAME WMU 1-cycle 240-Hz features as proposed, ARX input/output fit selected by chronological hold-out, spectral apparent-inertia conversion",
+    "proposed": "WMU 1-cycle features, DPSS multitaper, non-overlap 8.53s blocks, temporal CV, constrained nonnegative response dictionary, iteratively reweighted ridge, block bootstrap"
+  },
+  "not_claimed": [
+    "No proof of universal separation of droop and inertia",
+    "No IEEE 39-bus EMT system or real grid measurements",
+    "No exact reimplementation of published Tuttelberg ARMAX inertia estimator",
+    "Synthetic excitation intentionally broadband up to 9.5Hz; a real power-grid ambient spectrum can be much narrower",
+    "Stationary block bootstrap underestimates total error; displayed band adds heuristic heldout model-mismatch margin, NOT a calibrated statistical confidence interval"
+  ],
+  "parameters": {
+    "seed": 20261022,
+    "dpss_NW": 3.0,
+    "dpss_K": 4,
+    "bootstraps": 18,
+    "estimated_band_Hz": [
+      0.4,
+      7.0
+    ],
+    "training_band_Hz": [
+      0.25,
+      9.0
+    ],
+    "identification_seconds_per_stage": 97.0
+  },
+  "RMSE_improvement_pct": 82.31912798332928
+}
